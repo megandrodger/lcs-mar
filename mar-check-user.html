@@ -16,6 +16,7 @@
 	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
+	<!-- <link href="stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" /> -->
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/form.storage.js"></script>
@@ -32,51 +33,56 @@
 	<main id="content" role="main">
 		<div data-includefile="banner-alpha"></div>
 
-<!-- DELETE FROM HERE -->
 
-<form name="test-form" class="form">
-	<br>
-		<a href="contact2.html">< Back</a>
+		<div class="column-two-thirds">
 
-		<h1 class="heading-medium">Select property address</h1>
+			<form name="test-form" class="form">
+				<br>
+				<a href="contact.html">< Back</a>
 
-		<p>Postcode</p>
-	<p class="bold">SE27 9RZ <span class="indent"><a href="request-property-address.html">Change</a></span></p>
+				<h1 class="heading-medium">Can you make a report to the Home Office?  </h1>
+<p>Tick the boxes to check you can use this service:</p>
+				<!--Home address  -->
+
+				<ul>
+					<li><input id="checkbox-3" name="contact-by-text-phone" type="checkbox" value="true">
+					 The rental property is in England
+					</label></li>
+					<br>
+					<li><input id="checkbox-3" name="contact-by-text-phone" type="checkbox" value="true">
+						You carried out a right to rent check at the start of the tenancy
+					</label></li>
+					<br>
+					<li><input id="checkbox-3" name="contact-by-text-phone" type="checkbox" value="true">
+					 Your tenant failed a right to rent follow-up check
+					</label></li>
+					<br>
+					<li><input id="checkbox-4" name="contact-by-text-phone" type="checkbox" value="true">
+						The tenancy started after 1 February 2016 (or 1 December 2014 in the West Midlands)
+					</label></li>
+					<br>
+					<li><input id="checkbox-4" name="contact-by-text-phone" type="checkbox" value="true">Your prospective tenant / tenant has given you permission to share their details with the Home Office </li>
+				</ul>
+
+
 <br>
-	<!--Select box -->
-	<div class="form-group">
-		<label class="form-label" for="select-box">Select the address <i class="fa fa-caret-down">
-		</i></label>
-		<select class="form-control" id="select-box">
-			<option>8 addresses found</option>
-			<option>1 Hamilton Road, London, Lambeth</option>
-			<option>3 Hamilton Road, London, Lambeth</option>
-			<option>5 Hamilton Road, London, Lambeth</option>
-			<option>7 Hamilton Road, London, Lambeth</option>
-			<option>9 Hamilton Road, London, Lambeth</option>
-			<option>11 Hamilton Road, London, Lambeth</option>
-			<option>13 Hamilton Road, London, Lambeth</option>
-			<option>15 Hamilton Road, London, Lambeth</option>
-		</select>
-	</div>
 
-	<br>
-	<a href="request-property-address-manual.html">I can't find the address on the list</a>
-<br>
-<br>
+				<div class="form-group">
+					<a class="button" href="mar-tenancy-start.html">Continue</a>
+
+				</div>
+			</form>
 
 
 
-	<div class="form-group">
-		<a class="button" href="request-landlord-agent.html">Continue</a>
+		</div> <!-- column-two-thirds -->
 
-	</div>
-</form>
 
 <!-- STOP DELETING! -->
 
 
-	</main>
-	<footer data-includefile="footer"></footer>
+</main>
+<footer data-includefile="footer"></footer>
+
 </body>
 </html>
