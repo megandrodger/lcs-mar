@@ -47,10 +47,7 @@
 	<div class="form-group">
 
 		<!--2  -->
-		<label class="block-label selectable" for="radio-1">
-			<input id="radio-1" type="radio" name="travel-how" value="one">
-			<span class="bold">Carry out a right to rent check yourself</span> <br>Make sure that your prospective tenant can legally rent your property in England.
-		</label>
+
 		<!-- <div class="optional-section-travel-how form-group" data-toggle-value="two">
 
 <p>If you have reasonable cause to believe that a person is disqualified from renting due to their immigration status you can request a Notice of Letting to a Disqualified Person from the Home Office to confirm this. You can then use this to help you end the tenancy. </p>
@@ -59,7 +56,7 @@
 		<!--3  -->
 		<label class="block-label selectable" for="radio-2">
 			<input id="radio-2" type="radio" name="travel-how" value="two">
-			<span class="bold">Request a Home Office right to rent check</span> <br> Ask the Home Office to check if you can rent to a current or prospective tenant if the Home Office has their documents or they have an outstanding application with the Home Office.
+			<span class="bold">Request a Home Office right to rent check</span> <br> Ask us to check if you can rent to a current or prospective tenant if the Home Office has their documents or they have an outstanding application with the Home Office.
 
 		</label>
 		<!-- <div class="optional-section-travel-how form-group" data-toggle-value="three">
@@ -106,10 +103,7 @@ $(function () {
 	$('a#button').click(function (e) {
 		var value = $('input[name=travel-how]:checked').val();
 		switch(value) {
-			case 'one':
-			this.href = 'rtr-check-user.html';
-			/*https://www.gov.uk/check-tenant-right-to-rent-documents/who-to-check*/
-			break;
+
 			case 'two':
 			this.href = 'request-check-user.html';
 			break;
