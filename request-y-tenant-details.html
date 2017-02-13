@@ -42,8 +42,9 @@
 				<a href="applicant.html">< Back</a>
 
 
-				<h1 class="heading-medium">Do you have any of the following details for [tenant's name]?</h1>
-				<p>We’ll get back to you within 2 working days, but if you can’t give us any additional details, we may have further queries. Providing as much information as you can will help us give you a response on [tenant's name] right to rent more quickly.</p>
+				<h1 class="heading-medium">What additional information can you provide for [tenant's name]?</h1>
+				<p>We’ll get back to you within 2 working days, but if you can provide any additional details here, you may get an answer from us on [tenant's name]’s right to rent more quickly.</p>
+				<p>Select any that you provide below to find out more and fill in the details.</p>
 				<form name="test-form">
 
 					<div class="form-group">
@@ -60,14 +61,15 @@
 					<!--Radio 1  -->
 					<label class="block-label" for="radio-1">
 						<input id="radio-1" type="checkbox" name="travel-how" value="one">
-						Home Office reference number
+						<span class="bold">Home Office reference number</span>
+						<p>If the person has applied for a visa with the Home Office, they will be issued with a reference number. This could be an application or appeal number, an Application Registration Card (ARC) number or a case ID number.</p>
 					</label>
 					<div class="optional-section-travel-how form-group" data-toggle-value="one">
 						<br>
 						<label class="form-label" for="vac-city2">
 							Reference number
 						</label>
-						<span class="form-hint">If the person has applied for a visa with the Home Office, they will be issued with a reference number. This could be an application or appeal number, an Application Registration Card (ARC) number or a case ID number. </span>
+						<!-- <span class="form-hint"> </span> -->
 					</label>
 					<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
 
@@ -76,7 +78,7 @@
 				<!--Radio 2  -->
 				<label class="block-label" for="radio-2">
 					<input id="radio-2" type="checkbox" name="travel-how" value="two">
-					Passport number
+					<span class="bold">Passport number</span>
 				</label>
 				<div class="optional-section-travel-how form-group" data-toggle-value="two">
 					<br>
@@ -91,14 +93,15 @@
 				<!--Radio 3  -->
 				<label class="block-label" for="radio-6">
 					<input id="radio-6" type="checkbox" name="travel-how" value="six">
-					Biometric residence permit number
+					<span class="bold">Biometric residence permit number</span>
+					<p>A biometric residence permit is an identification card that proves the holder has the right to live, work or study in the UK.</p>
 				</label>
 				<div class="optional-section-travel-how form-group" data-toggle-value="six">
 					<br>
 					<label class="form-label" for="vac-city2">
 						Biometric residence permit number
 					</label>
-					<span class="form-hint">A biometric residence permit is an identification card that proves the holder has the right to live, work or study in the UK. </span>
+					<!-- <span class="form-hint">A biometric residence permit is an identification card that proves the holder has the right to live, work or study in the UK. </span> -->
 					</label>
 					<textarea name="Text333a" cols="340" rows="1" style="width:250px; height:30px;" id="Text333a"></textarea>
 					<br><br>
@@ -108,7 +111,7 @@
 			<!--Radio 4  -->
 			<label class="block-label" for="radio-5">
 				<input id="radio-5" type="checkbox" name="travel-how" value="five">
-				Recorded delivery number of [tenant / prospective tenant's] latest application to the Home Office
+				<span class="bold">Recorded delivery number of [tenant / prospective tenant's] latest application to the Home Office</span>
 
 			</label>
 			<div class="optional-section-travel-how form-group" data-toggle-value="five">
