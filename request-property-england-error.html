@@ -36,40 +36,73 @@
 
 		<div class="column-two-thirds">
 
-			<form name="test-form" class="form">
-				<br>
-				<a href="contact.html">< Back</a>
+			<!-- START PAGE -->
+			<!-- <br> -->
+			<div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
 
-				<h1 class="heading-medium">What's the person's current address?</h1>
+  <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+    Message to alert the user to a problem goes here
+  </h1>
 
-				<!--Home address  -->
+  <p>
+    Optional description of the errors and how to correct them
+  </p>
 
+  <ul class="error-summary-list">
+    <li><a href="#example-personal-details">Descriptive link to the question with an error</a></li>
+  </ul>
 
+</div>
+<!--  -->
+
+			<h1 class="heading-medium">Is the rental property in England?</h1>
+			<p>You can only use this service if the property is in England.</p>
+
+			<form name="test-form">
 
 				<div class="form-group">
-					<label class="form-label" for="full-name">Postcode</label>
-					<input type="text" class="form-control" id="full-name" name="full-name" />
-				</div>
+					<label class="block-label" for="radio-1">
+						<input id="radio-1" type="radio" name="radio-group" value="yes">
+						Yes
+					</label>
 
-<a href="request-current-property-address-manual.html">Enter address manually</a>
-<br><br>
-
-				<div class="form-group">
-					<a class="button" href="request-current-property-address-select.html">Find address</a>
-
-				</div>
-			</form>
+					<label class="block-label" for="radio-2">
+						<input id="radio-2" type="radio" name="radio-group" value="no">
+						No
+					</label>
 
 
+			</div>
 
-		</div> <!-- column-two-thirds -->
+		</form>
+
+		<br>
+		<a href="#"><input class="button" type="submit" value="Continue"></a>
+
+	</div> <!-- column-two-thirds -->
 
 
-<!-- STOP DELETING! -->
+	<!-- STOP DELETING! -->
 
 
 </main>
 <footer data-includefile="footer"></footer>
-
+<script type="text/javascript">
+$(function () {
+	$('a').click(function (e) {
+		var value = $('input[name=radio-group]:checked').val();
+		// var value = $('input#input-text-id').val();
+		switch(value) {
+			case 'yes':
+			this.href = 'request-person-england.html';
+			break;
+			case 'no':
+			this.href = '#';
+			break;
+		}
+		return true;
+	});
+});
+</script>
 </body>
 </html>
