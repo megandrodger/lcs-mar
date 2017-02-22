@@ -16,7 +16,6 @@
 	<link href="govuk-assets/stylesheets/govuk-template-print.css?0.12.0" media="print" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/application.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="govuk-assets/stylesheets/fonts.css?0.12.0" media="all" rel="stylesheet" type="text/css" />
-	<link href="stylesheets/main.css" media="all" rel="stylesheet" type="text/css" />
 	<!-- <link href="stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" /> -->
 
 	<script type="text/javascript" src="scripts/jquery.min.js"></script>
@@ -35,72 +34,36 @@
 		<div data-includefile="banner-alpha"></div>
 
 
+		<div class="column-two-thirds">
+
 			<!-- START PAGE -->
+			<br>
+
+			<h1 class="heading-medium">Is there another person you'd like to request a check for?</h1>
+<p>You should only use this service to check individuals who cannot provide documents. If they can provide documents, you should do the check yourself.</p>
+			<form name="test-form">
+
+				<div class="form-group">
+					<label class="block-label" for="radio-1">
+						<input id="radio-1" type="radio" name="radio-group" value="yes">
+						Yes
+					</label>
+
+					<label class="block-label" for="radio-2">
+						<input id="radio-2" type="radio" name="radio-group" value="no">
+						No
+					</label>
 
 
-
-						<div class="column-two-thirds">
-
-						<h1 class="heading-large">Check a tenant's right to rent</h1>
-
-						<br>
-
-						<div class="grid-row">
-
-						<ul>
-
-							<div class="column-one-half">
-							<li><a href="index.html">1. Who you have to check</a></li><br>
-							<li>2. Who does the check</li><br>
-							<li><a href="index3.html">3. If your tenant has documents</a></li><br>
-						</div>
-
-						<div class="column-one-half">
-							<li><a href="index4.html">4. If your tenant doesn’t have documents</a></li><br>
-							<li><a href="index5.html">5. If your tenant has time limited permission to stay</a></li><br>
-							</ul>
-
-						</div>
-
-						</div> <!-- column-one-third -->
-
-
-
-						<div class="column-two-thirds">
-
-
-		<h2 class="heading-medium">2. Who does the check</h2>
-
-		<p>As a landlord, you will need to find out which adults will use your property
-			as their main home and check your tenants’ documents yourself.</p>
-		<p>If you can’t undertake checks because your tenant is not able to produce
-			documents, you may need to ask the Home Office to undertake a right to rent
-			check on your behalf.</P>
-
-		<h3 class="heading-small">Agents and subletting</h3>
-
-		<p>A landlord can ask any agents that manage or let the property to carry out
-			the check for them. You should have this agreement in writing.</p>
-		<p>If a tenant sub-lets the property without you knowing, they’re responsible
-			for carrying out checks on any sub-tenants. They will liable for any <a href="https://www.gov.uk/penalties-illegal-renting">
-			civil penalties</a> if they don’t do the check correctly.</p>
-
-			<div class="notice">
- 			<i class="fa fa-exclamation-circle fa-lg">
-   		<span class="visuallyhidden">Warning</span>
- 			</i>
- 			<strong class="bold-small">
-   		<a href="https://www.gov.uk/penalties-illegal-renting">You can be fined up to £3,000</a> for renting your property to someone who isn’t allowed to rent property in England.
- 			</strong>
 			</div>
 
-			<br><br>
-			<a href="index3.html">Next page 'If your tenant has documents'</a>
+		</form>
 
-<br><br>
+		<br>
+		<a href="#"><input class="button" type="submit" value="Continue"></a>
 
 	</div> <!-- column-two-thirds -->
-</div>
+
 
 	<!-- STOP DELETING! -->
 
@@ -109,17 +72,16 @@
 <footer data-includefile="footer"></footer>
 <script type="text/javascript">
 $(function () {
-	$('a#button').click(function (e) {
-		var value = $('input[name=travel-how]:checked').val();
+	$('a').click(function (e) {
+		var value = $('input[name=radio-group]:checked').val();
+		// var value = $('input#input-text-id').val();
 		switch(value) {
-
-			case 'two':
-			this.href = 'request-check-user.html';
+			case 'yes':
+			this.href = 'request-y-tenant-name.html';
 			break;
-			case 'three':
-			this.href = 'mar-check-user.html';
+			case 'no':
+			this.href = 'request-property-address.html';
 			break;
-
 		}
 		return true;
 	});
