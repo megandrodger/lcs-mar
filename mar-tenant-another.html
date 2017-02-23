@@ -36,55 +36,56 @@
 
 		<div class="column-two-thirds">
 
-			<!-- DELETE FROM HERE -->
+			<!-- START PAGE -->
+			<br>
 
-			<form name="test-form" class="form">
-				<br>
-				<a href="applicant.html">< Back</a>
-			<h1 class="heading-medium">When did the tenancy start?</h1>
-
-<p>To make a report, tenancy must start on or after 1 February 2016, or 1 December 2014 in  Birmingham, Dudley, Sandwell, Walsall or Wolverhampton.</p>
-
-			<!-- Date of birth -->
+			<h1 class="heading-medium">Is there another person on the same tenancy you'd like to make a report for?</h1>
+<p>You should only use this service to report individuals that failed their follow-up right to rent check.</p>
+			<form name="test-form">
 
 				<div class="form-group">
-					<fieldset>
-						<legend class="form-label"></legend>
+					<label class="block-label" for="radio-1">
+						<input id="radio-1" type="radio" name="radio-group" value="yes">
+						Yes
+					</label>
 
-						<div class="form-date">
-							<p class="form-hint">For example, 31 3 2016</p>
-
-							<div class="form-group form-group-day">
-								<label for="dob-day">Day</label> <input class="form-control" id="dob-day"
-								type="number" pattern="[0-9]*" min="0" max="31" name="dob-day" />
-							</div>
-
-							<div class="form-group form-group-month">
-								<label for="dob-month">Month</label> <input class="form-control" id=
-								"dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dob-month" />
-							</div>
-
-							<div class="form-group form-group-year">
-								<label for="dob-year">Year</label> <input class="form-control" id="dob-year"
-								type="number" pattern="[0-9]*" min="0" max="2014" name="dob-year" />
-							</div>
-						</div>
-					</fieldset>
-				</div>
+					<label class="block-label" for="radio-2">
+						<input id="radio-2" type="radio" name="radio-group" value="no">
+						No
+					</label>
 
 
-				<div class="form-group">
-					<a class="button" href="mar-y-tenant-name.html">Continue</a>
+			</div>
 
-				</div>
-			</form>
+		</form>
 
-		</div> <!-- column-two-thirds -->
+		<br>
+		<a href="#"><input class="button" type="submit" value="Continue"></a>
 
-<!-- STOP DELETING! -->
+	</div> <!-- column-two-thirds -->
+
+
+	<!-- STOP DELETING! -->
 
 
 </main>
 <footer data-includefile="footer"></footer>
+<script type="text/javascript">
+$(function () {
+	$('a').click(function (e) {
+		var value = $('input[name=radio-group]:checked').val();
+		// var value = $('input#input-text-id').val();
+		switch(value) {
+			case 'yes':
+			this.href = 'mar-tenant-name-another.html';
+			break;
+			case 'no':
+			this.href = 'mar-property-address.html';
+			break;
+		}
+		return true;
+	});
+});
+</script>
 </body>
 </html>
