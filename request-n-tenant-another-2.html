@@ -36,76 +36,56 @@
 
 		<div class="column-two-thirds">
 
-			<!-- DELETE FROM HERE -->
-
-			<form name="test-form" class="form">
-				<br>
-				<a href="applicant.html">< Back</a>
-			<h1 class="heading-medium">What are the tenant’s details?</h1>
-
-
-			<!--Full name -->
-
-			<div class="form-group">
-				<label class="form-label" for="full-name">Full name</label>
-				<input type="text" class="form-control" id="full-name5" name="full-name5" />
-
-			</div>
+			<!-- START PAGE -->
 			<br>
 
-			<!-- dob -->
-<label class="form-label" for="full-name">Date of birth</label>
+			<h1 class="heading-medium">Is there another person you'd like to request a check for?</h1>
+<p>You should only use this service to check individuals who cannot provide documents. If they can provide documents, you should do the check yourself.</p>
+			<form name="test-form">
+
 				<div class="form-group">
-					<fieldset>
-						<legend class="form-label"></legend>
+					<label class="block-label" for="radio-1">
+						<input id="radio-1" type="radio" name="radio-group" value="yes">
+						Yes
+					</label>
 
-						<div class="form-date">
-							<p class="form-hint">For example, 12 3 1980</p>
+					<label class="block-label" for="radio-2">
+						<input id="radio-2" type="radio" name="radio-group" value="no">
+						No
+					</label>
 
-							<div class="form-group form-group-day">
-								<label for="dob-day">Day</label> <input class="form-control" id="dob-day"
-								type="number" pattern="[0-9]*" min="0" max="31" name="dob-day" />
-							</div>
-
-							<div class="form-group form-group-month">
-								<label for="dob-month">Month</label> <input class="form-control" id=
-								"dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dob-month" />
-							</div>
-
-							<div class="form-group form-group-year">
-								<label for="dob-year">Year</label> <input class="form-control" id="dob-year"
-								type="number" pattern="[0-9]*" min="0" max="2014" name="dob-year" />
-							</div>
-						</div>
-					</fieldset>
-				</div>
-<br>
-<!-- nationality -->
-			<div class="form-group">
-				<label class="form-label" for="full-name">Country of nationality</label>
-				<input type="text" class="form-control" id="full-name5" name="full-name5" />
 
 			</div>
 
-			<!-- <a href="request-tenant-name-another.html">Add another tenant</a> -->
-			<br><br>
-
-
-			<div class="form-group">
-				<a class="button" href="request-y-tenant-details.html">Continue</a>
-
-			</div>
 		</form>
 
+		<br>
+		<a href="#"><input class="button" type="submit" value="Continue"></a>
 
-			</form>
+	</div> <!-- column-two-thirds -->
 
-		</div> <!-- column-two-thirds -->
 
-<!-- STOP DELETING! -->
+	<!-- STOP DELETING! -->
 
 
 </main>
 <footer data-includefile="footer"></footer>
+<script type="text/javascript">
+$(function () {
+	$('a').click(function (e) {
+		var value = $('input[name=radio-group]:checked').val();
+		// var value = $('input#input-text-id').val();
+		switch(value) {
+			case 'yes':
+			this.href = '#';
+			break;
+			case 'no':
+			this.href = 'request-property-address.html';
+			break;
+		}
+		return true;
+	});
+});
+</script>
 </body>
 </html>
