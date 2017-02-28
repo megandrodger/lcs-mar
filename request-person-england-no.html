@@ -39,31 +39,12 @@
 			<!-- START PAGE -->
 			<br>
 
-			<h1 class="heading-medium">Is the person in England?</h1>
+			<h1 class="heading-medium">You do not need to use a Home Office right to rent check</h1>
 <p>The prospective tenant must already be in England in order for us to perform the check.</p>
-			<form name="test-form">
 
-				<div class="form-group">
-					<label class="block-label" for="radio-1">
-						<input id="radio-1" type="radio" name="radio-group" value="yes">
-						Yes
-					</label>
-
-					<label class="block-label" for="radio-2">
-						<input id="radio-2" type="radio" name="radio-group" value="no">
-						No
-					</label>
-
-
-			</div>
-			<br>
-			<div>
-				<p style ="color:#B10E1E">You do not need to use a Home Office right to rent check. <br><a href="index.html">Go back to guidance</a></p>
-			</div>
-		</form>
 
 		<br>
-		<a href="#"><input class="button" type="submit" value="Continue"></a>
+		<a href="index.html"><input class="button" type="submit" value="Return to guidance"></a>
 
 	</div> <!-- column-two-thirds -->
 
@@ -73,22 +54,6 @@
 
 </main>
 <footer data-includefile="footer"></footer>
-<script type="text/javascript">
-$(function () {
-	$('a').click(function (e) {
-		var value = $('input[name=radio-group]:checked').val();
-		// var value = $('input#input-text-id').val();
-		switch(value) {
-			case 'yes':
-			this.href = 'request-current-property-address.html';
-			break;
-			case 'no':
-			this.href = '#';
-			break;
-		}
-		return true;
-	});
-});
-</script>
+
 </body>
 </html>
